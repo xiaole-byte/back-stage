@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-20 14:30:50
- * @LastEditTime: 2021-02-21 17:24:48
+ * @LastEditTime: 2021-02-21 18:57:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \项目\后台管理系统\management\src\main.js
@@ -18,6 +18,11 @@ Vue.use(ElementUI);
 
 // 引入样式重置文件
 import './assets/css/rest.css'
+
+// 引入axios
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
 

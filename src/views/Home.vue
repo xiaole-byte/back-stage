@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-20 14:30:50
- * @LastEditTime: 2021-02-21 18:20:04
+ * @LastEditTime: 2021-02-21 18:53:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \项目\后台管理系统\management\src\views\Home.vue
@@ -14,11 +14,11 @@
     </el-header>
     <el-container>
       <el-aside width="200px">
-        <el-menu :default-openeds="['1', '3']">
+        <el-menu :default-openeds="['1', '3']" router="router">
           <el-submenu index="1">
-            <template slot="title"
-              ><i class="el-icon-message"></i>用户管理</template>
-              <el-menu-item index="1-1">用户列表</el-menu-item>
+            <template slot="title">
+              <i class="el-icon-message"></i>用户管理</template>
+                 <el-menu-item index="/list">用户列表</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">
@@ -54,6 +54,7 @@
 export default {
   data () {
     return {
+      router: true,
     }
   }
 };
