@@ -1,23 +1,26 @@
 /*
  * @Author: your name
  * @Date: 2021-02-20 14:30:50
- * @LastEditTime: 2021-02-21 15:10:13
+ * @LastEditTime: 2021-02-21 18:21:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \项目\后台管理系统\management\src\router\index.js
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Login from '../views/login.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    redirect: '/home',
-    component: Home
+    redirect: '/login',
+    component: Login
+  },
+  {
+    path:'/login',
+    component:() => import("../views/login.vue")
   },
   {
     path: '/home',
