@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-02-20 14:30:50
+ * @LastEditTime: 2021-02-21 15:10:13
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \项目\后台管理系统\management\src\router\index.js
+ */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
@@ -8,15 +16,20 @@ const routes = [
   {
     path: '/',
     name: 'Home',
+    redirect: '/home',
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/home',
+    component:() => import("../views/Home.vue")
+  },
+  {
+    path: '/manage',
+    component:() => import("../views/manage.vue")
+  },
+  {
+    path: '/list',
+    component:() => import("../views/list.vue")
   }
 ]
 
