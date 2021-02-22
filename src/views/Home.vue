@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-20 14:30:50
- * @LastEditTime: 2021-02-22 08:27:46
+ * @LastEditTime: 2021-02-22 11:31:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \项目\后台管理系统\management\src\views\Home.vue
@@ -14,34 +14,34 @@
     </el-header>
     <el-container height="100%">
       <el-aside width="200px" height="100%">
-        <el-menu :default-openeds="['1', '3']" router="router">
+        <el-menu router="router">
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-message"></i>用户管理</template>
-                 <el-menu-item index="">用户列表</el-menu-item>
+                 <el-menu-item index="/home/user">用户列表</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">
               <i class="el-icon-menu"></i>权限管理</template>
-              <el-menu-item index="2-1">角色列表</el-menu-item>
-              <el-menu-item index="2-2">权限列表</el-menu-item>
+              <el-menu-item index="/home/jurisdiction">角色列表</el-menu-item>
+              <el-menu-item index="/home/role">权限列表</el-menu-item>
           </el-submenu>
           <el-submenu index="3">
             <template slot="title">
               <i class="el-icon-goods"></i>商品管理</template>
-              <el-menu-item index="3-1">商品列表</el-menu-item>
-              <el-menu-item index="3-2">分类参数</el-menu-item>
-              <el-menu-item index="3-3">商品分类</el-menu-item>
+              <el-menu-item index="/home/classify">商品列表</el-menu-item>
+              <el-menu-item index="/home/goods">分类参数</el-menu-item>
+              <el-menu-item index="/home/parameter">商品分类</el-menu-item>
           </el-submenu>
           <el-submenu index="4">
             <template slot="title">
               <i class="el-icon-s-order"></i>订单管理</template>
-              <el-menu-item index="3-1">订单列表</el-menu-item>
+              <el-menu-item index="/home/order">订单列表</el-menu-item>
           </el-submenu>
           <el-submenu index="5">
             <template slot="title"
               ><i class="el-icon-s-claim"></i>数据统计</template>
-            <el-menu-item index="3-1">数据报表</el-menu-item>
+            <el-menu-item index="/home/report">数据报表</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
@@ -64,6 +64,7 @@ export default {
 
 <style lang="less">
 .el-container {
+  height: 100%;
   .el-header {
     background-color: rgb(55, 61, 65);
     color: #fff;
@@ -76,6 +77,7 @@ export default {
   }
   .el-menu {
     background-color: rgb(55, 61, 65);
+    height: 100%;
   }
   .el-submenu__title {
     color: #fff;
