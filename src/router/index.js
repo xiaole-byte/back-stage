@@ -24,8 +24,42 @@ const routes = [
   },
   {
     path: '/home',
-    component:() => import("../views/Home.vue")
-  },
+    component:() => import("../views/Home.vue"),
+    children: [
+      {
+        path: '/home/user',
+        component:() => import("../components/User/user.vue"),
+      },
+      {
+        path: '/home/jurisdiction',
+        component:() => import("../components/Jurisdiction/jurisdiction.vue"),
+      },
+      {
+        path: '/home/role',
+        component:() => import("../components/Jurisdiction/role.vue"),
+      },
+      {
+        path: '/home/order',
+        component:() => import("../components/Order/order.vue"),
+      },
+      {
+        path: '/home/report',
+        component:() => import("../components/Statistics/report.vue"),
+      },
+      {
+        path: '/home/classify',
+        component:() => import("../components/Goods/classify.vue"),
+      },
+      {
+        path: '/home/goods',
+        component:() => import("../components/Goods/goods.vue"),
+      },
+      {
+        path: '/home/parameter',
+        component:() => import("../components/Goods/parameter.vue"),
+      },
+    ]
+  },  
   {
     path: '/manage',
     component:() => import("../views/manage.vue")
