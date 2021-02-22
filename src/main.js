@@ -21,13 +21,15 @@ import './assets/css/rest.css'
 
 // 引入axios
 import axios from 'axios'
-import VueAxios from 'vue-axios'
-Vue.use(VueAxios, axios)
 
+// 配置请求的根路径
+axios.defaults.baseURL = 'http://192.168.31.110:8888/api/private/v1/'
+
+Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')
