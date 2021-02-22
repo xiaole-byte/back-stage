@@ -23,7 +23,7 @@
           <el-submenu index="2">
             <template slot="title">
               <i class="el-icon-menu"></i>权限管理</template>
-              <el-menu-item index="2-1">角色列表</el-menu-item>
+              <el-menu-item index="/home/2-1">角色列表</el-menu-item>
               <el-menu-item index="2-2">权限列表</el-menu-item>
           </el-submenu>
           <el-submenu index="3">
@@ -64,6 +64,7 @@ export default {
 
 <style lang="less">
 .el-container {
+  height: 100%;
   .el-header {
     background-color: rgb(55, 61, 65);
     color: #fff;
@@ -76,6 +77,7 @@ export default {
   }
   .el-menu {
     background-color: rgb(55, 61, 65);
+    height: 100%;
   }
   .el-submenu__title {
     color: #fff;
