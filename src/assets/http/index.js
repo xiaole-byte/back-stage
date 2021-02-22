@@ -12,17 +12,18 @@ export default function (config) {
     //axios 拦截 全局配置
     const instance = axios.create({
         baseURL: '/api',
-        timeout: 1000,
+        timeout: 3000,
     });
 
     // 添加请求拦截器
     instance.interceptors.request.use(function (config) {
         // 在发送请求之前做些什么
-        let token = sessionStorage.getItem('token');
+        // let token = sessionStorage.getItem('token');
         if(config.url == '/register' || config.url == '/login'){
             return config;
         }else{
-            config.headers['token'] = token;
+            console.log(config);
+            config.headers.Authorization = sessionStorage.getItem("token");
             return config;
         }
     }, function (error) {
