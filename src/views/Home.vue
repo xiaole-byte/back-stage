@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-20 14:30:50
- * @LastEditTime: 2021-02-21 18:53:32
+ * @LastEditTime: 2021-02-22 08:27:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \项目\后台管理系统\management\src\views\Home.vue
@@ -12,13 +12,13 @@
       电商后台管理系统
       <el-button type="info">退出</el-button>
     </el-header>
-    <el-container>
-      <el-aside width="200px">
+    <el-container height="100%">
+      <el-aside width="200px" height="100%">
         <el-menu :default-openeds="['1', '3']" router="router">
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-message"></i>用户管理</template>
-                 <el-menu-item index="/list">用户列表</el-menu-item>
+                 <el-menu-item index="">用户列表</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">
@@ -45,7 +45,9 @@
           </el-submenu>
         </el-menu>
       </el-aside>
-      <el-main></el-main>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -78,6 +80,10 @@ export default {
   .el-submenu__title {
     color: #fff;
   }
+  .el-submenu__title:hover{
+    background-color: rgb(55, 61, 65);
+  }
+  
   .el-menu-item {
     color: #fff;
   }
