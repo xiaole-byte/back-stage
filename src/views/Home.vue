@@ -79,6 +79,12 @@ export default {
     background-color: rgb(55, 61, 65);
     height: 100%;
   }
+  .el-menu-item:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .el-submenu .is-active{
+    background-color: rgb(55, 61, 65);
+  }
   .el-submenu__title {
     color: #fff;
   }
@@ -88,6 +94,9 @@ export default {
   
   .el-menu-item {
     color: #fff;
+  }
+  .is-active{
+    color: #409EFF
   }
   .el-main{
     background-color: rgb(234, 237, 241);
