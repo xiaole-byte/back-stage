@@ -1,1 +1,23 @@
+<<<<<<< HEAD
 # back-stage
+=======
+# management
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+>>>>>>> 46d6c7c6db905445433fdac592fcfea9933a8961
